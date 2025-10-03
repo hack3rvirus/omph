@@ -1,0 +1,7 @@
+{
+  "/associations/page": "app/associations/page.js",
+  "/page": "app/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/mass-schedule/page": "app/mass-schedule/page.js",
+  "/about/page": "app/about/page.js"
+}

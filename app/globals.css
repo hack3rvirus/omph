@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Catholic Church Website Custom Styles */
+:root {
+  /* Our Mother of Perpetual Help Theme */
+  --primary-color: #581C87; /* Deep Purple */
+  --secondary-color: #B91C1C; /* Red */
+  --accent-color: #FFD700; /* Vatican Gold */
+  --background-primary: #FFFFFF; /* Pure White */
+  --text-primary: #1F2937; /* Charcoal */
+  --church-patron-color: #581C87; /* Patron Saint Color */
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-body);
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* Custom components */
+@layer components {
+  .catholic-card {
+    @apply bg-white shadow-lg rounded-lg p-6 border-t-4 border-church-primary hover:shadow-xl hover:scale-105 transition-all duration-300;
+  }
+
+  .catholic-button {
+    @apply bg-church-primary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105;
+  }
+
+  .catholic-button-secondary {
+    @apply bg-church-secondary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105;
+  }
+
+  .interactive-text {
+    @apply transition-all duration-300 hover:text-church-primary hover:scale-105 cursor-pointer;
+  }
+
+  .animated-heading {
+    @apply transition-all duration-500 hover:text-church-accent hover:drop-shadow-lg;
+  }
+  
+  .daily-content-card {
+    @apply bg-gradient-to-br from-white to-gray-50 border-l-4 border-church-primary p-6 rounded-r-lg shadow-md hover:shadow-lg transition-all duration-300;
+  }
+  
+  .association-card {
+    @apply bg-white border border-gray-200 rounded-lg p-6 hover:border-church-primary hover:shadow-md transition-all duration-300;
+  }
+  
+  .admin-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-primary focus:border-transparent;
+  }
+  
+  .chatbot-container {
+    @apply fixed bottom-6 right-6 z-50;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  }
+}
+
+/* Catholic iconography styles */
+.cross-icon {
+  filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.5));
+}
+
+.saint-image {
+  @apply rounded-full border-4 border-church-primary shadow-lg;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-p-4 {
+    padding: 1rem;
+  }
+}
