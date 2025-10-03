@@ -1,0 +1,20 @@
+{
+  "name": "OMPH Chaplaincy",
+  "logo": "/perpetualhelp.png",
+  "colors": {
+    "primaryBlue": "#1E3A8A",
+    "primaryRed": "#8B0000",
+    "accentGold": "#D4AF37",
+    "navyBlue": "#1E3A8A",
+    "warmGold": "#D4AF37",
+    "liturgicalRed": "#8B0000",
+    "beigeBg": "#F5F5DC",
+    "bgWhite": "#FFFFFF",
+    "darkText": "#2D3748",
+    "gray600": "#A0AEC0"
+  },
+  "fonts": {
+    "heading": "Playfair Display",
+    "body": "Lato"
+  }
+}

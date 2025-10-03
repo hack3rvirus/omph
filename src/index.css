@@ -1,13 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --primary-blue: #1E3A8A;
+  --accent-gold: #D4AF37;
+  --navy-blue: #1E3A8A;
+  --warm-gold: #D4AF37;
+  --liturgical-red: #8B0000;
+  --beige-bg: #F5F5DC;
+  --dark-text: #2D3748;
+  --gray-600: #A0AEC0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--beige-bg);
+  color: var(--dark-text);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.font-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-body {
+  font-family: 'Lato', sans-serif;
+}
+
+.bg-primaryBlue {
+  background-color: var(--primary-blue);
+}
+
+.text-primaryBlue {
+  color: var(--primary-blue);
+}
+
+.bg-accentGold {
+  background-color: var(--accent-gold);
+}
+
+.text-accentGold {
+  color: var(--accent-gold);
+}
+
+.bg-navyBlue {
+  background-color: var(--navy-blue);
+}
+
+.text-navyBlue {
+  color: var(--navy-blue);
+}
+
+.bg-warmGold {
+  background-color: var(--warm-gold);
+}
+
+.text-warmGold {
+  color: var(--warm-gold);
+}
+
+.bg-liturgicalRed {
+  background-color: var(--liturgical-red);
+}
+
+.text-liturgicalRed {
+  color: var(--liturgical-red);
+}
+
+.bg-beigeBg {
+  background-color: var(--beige-bg);
+}
+
+.text-darkText {
+  color: var(--dark-text);
+}
+
+.text-gray-600 {
+  color: var(--gray-600);
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:shadow-xl:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom animations for Catholic feel - subtle glow for gold elements */
+@keyframes gold-glow {
+  0%, 100% { text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
+  50% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
+}
+
+.animate-gold-glow {
+  animation: gold-glow 2s ease-in-out infinite;
+}
+
+/* Page transition wrapper */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
 }
